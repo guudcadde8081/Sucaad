@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 19, 2025 at 04:54 PM
+-- Generation Time: May 19, 2025 at 07:04 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -20,6 +20,31 @@ SET time_zone = "+00:00";
 --
 -- Database: `suad_db`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `doctors`
+--
+
+CREATE TABLE `doctors` (
+  `id` int(11) NOT NULL,
+  `name` varchar(100) DEFAULT NULL,
+  `experience` int(11) DEFAULT NULL,
+  `specialty` varchar(100) DEFAULT NULL,
+  `language` varchar(100) DEFAULT NULL,
+  `fee` decimal(10,2) DEFAULT NULL,
+  `image` varchar(255) DEFAULT 'assets/icons/doctor.png'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `doctors`
+--
+
+INSERT INTO `doctors` (`id`, `name`, `experience`, `specialty`, `language`, `fee`, `image`) VALUES
+(1, 'Dr. Ahmed Walhad', NULL, 'Dhakhtar Guud', 'Somali, English', '10.00', 'assets/images/dr_walhad.jpeg'),
+(2, 'Dr. Duse Warsame', NULL, 'Carruurta', 'Somali, Arabic', '5.00', 'assets/icons/doctor.png'),
+(3, 'Dr. Mahamoud Ismail Mohamed', 10, 'Pediatrics', 'English, Somali', '8.00', 'assets/images/mahamoud.png');
 
 -- --------------------------------------------------------
 
@@ -52,6 +77,12 @@ INSERT INTO `users` (`id`, `name`, `email`, `password`, `phone`, `role`, `create
 --
 
 --
+-- Indexes for table `doctors`
+--
+ALTER TABLE `doctors`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -61,6 +92,12 @@ ALTER TABLE `users`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `doctors`
+--
+ALTER TABLE `doctors`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `users`
