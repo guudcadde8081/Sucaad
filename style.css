@@ -1,0 +1,165 @@
+/* Reset & Layout */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #F5F9FC;
+    color: #333333;
+}
+
+.wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+
+/* Header */
+header {
+    background-color: #2A72C2;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    margin-top: auto;
+    background-color: #2A72C2;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Headings & Text */
+h1, h2 {
+    color: #2A72C2;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 14px;
+    margin: 10px 0;
+    text-align: center;
+}
+
+a {
+    color: #2A72C2;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+/* Forms */
+form {
+    background: white;
+    padding: 20px;
+    border: 1px solid #DADDE2;
+    border-radius: 8px;
+    max-width: 400px;
+    margin: 0 auto 30px;
+}
+
+input, button {
+    width: 100%;
+    margin: 10px 0;
+    padding: 12px;
+    font-size: 14px;
+    border: 1px solid #DADDE2;
+    border-radius: 6px;
+}
+
+button {
+    background-color: #2A72C2;
+    color: white;
+    border: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #245fa3;
+}
+
+.success {
+    color: #38B000;
+}
+
+.error {
+    color: red;
+}
+
+.dashboard-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.dashboard-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: white;
+    border: 1px solid #DADDE2;
+    border-radius: 10px;
+    padding: 20px;
+    width: 180px;
+    text-decoration: none;
+    color: #2A72C2;
+    transition: transform 0.2s;
+}
+
+.dashboard-card:hover {
+    transform: scale(1.05);
+}
+
+.dashboard-card img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+}
+.dashboard-card h3 {
+    font-size: 16px;
+    margin: 10px 0 5px;
+}
+
+.dashboard-card p {
+    font-size: 13px;
+    margin: 2px 0;
+}
+
+.dashboard-card .btn {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #38B000;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.dashboard-card .btn:hover {
+    background-color: #2e9000;
+}
